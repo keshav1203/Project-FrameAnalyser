@@ -1,132 +1,111 @@
-# Project-FrameAnalyser
-🖼️ Real-Time Object & Keypoint Detection System
-🔍 Powered by YOLO | 👁️ Eye–Ear Keypoint Tracking | 🚨 Presence Alert System
+<div style="background-color:#1a1a1a; color:white; padding:25px; border-radius:12px; text-align:center;">
+  <h1>🖼️ Real-Time Object Detection & Keypoint Alert System</h1>
+  <p style="font-size:16px;">
+    YOLO-based object detection | Facial keypoints tracking | Presence monitoring with sound alert
+  </p>
+</div>
 
-This project is a real-time object detection and keypoint-based monitoring system built using YOLO (You Only Look Once).
-Along with standard object detection, it includes advanced head–facial keypoint tracking and an automatic alarm system when a person leaves the camera view.
+---
 
-🚀 Features
-✅ 1. Real-Time Object Detection
+## 🔍 **Project Overview**
 
-Detects multiple objects instantly using YOLO.
+This project is a **real-time object detection and keypoint-based monitoring system** using **YOLO**.  
+It detects objects, identifies **eyes, ears, and nose**, and triggers an **alarm sound** using `playsound`  
+when a person disappears from the camera frame.
 
-Efficient & lightweight code for high FPS performance.
+---
 
-Works on both webcam and video input.
+<div style="background-color:#2d2d2d; color:white; padding:15px; border-radius:8px;">
+<b>🔥 Key Features</b>
+</div>
 
-👁️ 2. Advanced Keypoint Detection
+### ✅ **Real-Time Object Detection**
+- High accuracy  
+- Runs on webcam or video  
+- Supports any YOLOv8 model  
 
-Using YOLO Pose Keypoints, the system tracks:
+### 👁️ **Keypoint Tracking**
+Detects the following in real-time:
+- Left Eye  
+- Right Eye  
+- Nose  
+- Left Ear  
+- Right Ear  
 
-Right Eye
+### 🚨 **Alert Using `playsound`**
+If no person is detected:
+- A loud **beep sound plays automatically**  
+- Great for monitoring & security
 
-Left Eye
+---
 
-Nose
+<div style="background-color:#2d2d2d; color:white; padding:15px; border-radius:8px;">
+<b>📁 Project Structure</b>
+</div>
+├── object_detection_project.ipynb
+├── knock1.jpg
+├── football.jpg
+├── hello.jpeg
+├── yolov8n-pose.pt (or similar YOLO model)
+└── README.md
 
-Right Ear
+---
 
-Left Ear
+## 🧠 **Use Cases**
 
-These keypoints help analyze human presence, direction, and reliability.
+<div style="background-color:#eeeeee; padding:10px; border-radius:6px;">
+<b>💡 Surveillance</b> – Airports, malls, public spaces  
+<br>
+<b>💡 Exam Monitoring</b> – Alert when a student leaves the frame  
+<br>
+<b>💡 Health Detection</b> – Early signs of drowsiness or facial deviation  
+</div>
 
-🚨 3. Presence Alert System
+---
 
-If the person’s head disappears from the screen (i.e., keypoints not detected), the system triggers:
+## 🛠️ **Tech Stack**
 
-🔔 Beep sound / Alarm
+- Python  
+- OpenCV  
+- Ultralytics YOLOv8  
+- NumPy  
+- playsound  
+- Jupyter Notebook  
 
-Helps in live monitoring and automation tasks
+---
 
-🧠 4. Multi-Purpose Use Cases
-🛡️ Surveillance Systems
+## ▶️ **How to Run**
 
-Airports, malls, hospitals, public spaces
-
-Detect suspicious activity and objects
-
-📝 Exam Monitoring
-
-Alarm when a student moves out of frame
-
-Helps detect malpractice or absence
-
-🏥 Early Disease/Health Monitoring
-
-Eye–ear asymmetry detection can be extended for:
-
-Paralysis early signs
-
-Drowsiness detection
-
-Head-position abnormalities
-
-🎯 General Computer Vision Tasks
-
-Can be integrated with gesture recognition
-
-**📁 Project Structure**
-
-Your folder contains the following files:
-
-├── object_detection_project.ipynb    # Main notebook for detection
-
-├── knock1.jpg                        # Test image 1
-
-├── football.jpg                      # Test image 2
-
-├── hello.jpeg                        # Test image 3
-
-├── yolov8n-pose.pt (or similar)      # YOLO pose model file
-
-├── README.md                         # Documentation (this file)
-
-**🛠️ Tech Stack**
-
-Python
-
-OpenCV
-
-Ultralytics YOLOv8
-
-NumPy
-
-playsound (for alarm sound)
-
-Jupyter Notebook (project written in .ipynb)
-
-**▶️ How to Run**
-
-1️⃣ Install Libraries
+1️⃣ Install the requirements  
+```bash
 pip install ultralytics opencv-python numpy playsound
 
-2️⃣ Open the Notebook
+2️⃣ Open the Jupyter Notebook
 jupyter notebook object_detection_project.ipynb
 
-3️⃣ Run All Cells
+3️⃣ Run all cells
 
-The YOLO model loads
+YOLO model loads
 
-Keypoint detection starts
+Webcam detection begins
 
-Alarm activates when person disappears
+Alarm triggers if person disappears
+
+---
 
 **🔮 Future Improvements**
 
-Add GUI for user-friendly interface
+Add GUI dashboard
 
-Add attendance system using face recognition
+Add face recognition
 
-Add logs of alerts (time-stamped)
+Add timestamped logs when alarm rings
 
-Cloud or web-based monitoring dashboard
+Multi-camera support
 
-Integrate multiple camera feeds
+Cloud-based monitoring
 
-**⭐ Support**
+⭐ **Support**
 
-If this project helped you, please star ⭐ the repository!
-
-Can be used for smart classrooms
-
-Can be part of robotics and automation
+If this project helped you, please star ⭐ the repository.
+It encourages future development!
